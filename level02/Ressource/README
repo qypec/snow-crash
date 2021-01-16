@@ -1,0 +1,19 @@
+1.
+level02@SnowCrash: $> ls
+level02.pcap
+
+2.
+local@user: $> scp -P 22 level02@192.168.236.28:~/level02.pcap level02/Ressource/level02.pcap
+local@user: $> chmod 777 level02/Ressource/level02.pcap
+
+3.
+// open .pcap file with WireShark
+// use function <Follow>
+// solving a small problem "ft_wandr...NDRel.L0L.  ->  ft_waNDReL0L"
+// password "ft_waNDReL0L"
+
+4. 
+$> su flag02 // with password "ft_waNDReL0L"
+$> getflag
+Check flag.Here is your token : kooda2puivaav1idi4f57q8iq
+$> su level03 // with password "kooda2puivaav1idi4f57q8iq"
