@@ -1,0 +1,22 @@
+1.
+$> find / -user flag00 2>/dev/null
+/usr/sbin/john
+/rofs/usr/sbin/john
+
+2.
+$> cat /rofs/usr/sbin/john
+cdiiddwpgswtgt
+$> cat /usr/sbin/john
+cdiiddwpgswtgt
+
+3.
+// decode cdiiddwpgswtgt with https://www.dcode.fr/chiffre-cesar
+// result: nottoohardhere
+
+4.
+$> su flag00 // with password "nottoohardhere"
+$> getflag
+Check flag.Here is your token : x24ti5gi3x0ol2eh4esiuxias
+$> su level01 // with password "x24ti5gi3x0ol2eh4esiuxias"
+
+DONE!
