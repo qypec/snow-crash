@@ -37,7 +37,7 @@ FIND this first file who can run only as flag00...
 
 
 На текущем уровне ни команда `ls`, ни `find` не дает результатов.
-Поэтому я решил заглянуть в файл, где хранятся пароли от всех пользователей `etc/passwd`.
+Поэтому я решил заглянуть в файл, где хранятся пароли от всех пользователей `/etc/passwd`.
 
 ![](img/level01_1.png)
 ![](img/level01_2.png)
@@ -50,9 +50,9 @@ FIND this first file who can run only as flag00...
 
 `42hDRfypTqqnw` -> `abcdefg`
 
-Добро пожаловать на level02
+Добро пожаловать на level02!
 
-![](img/level02_4.png)
+![](img/level01_4.png)
 
 ### level02
 
